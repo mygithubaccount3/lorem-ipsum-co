@@ -1,0 +1,48 @@
+footer {
+  background-color: #1d1e25;
+  padding-bottom: 3px;
+
+  .footer-wrapper {
+    border-top: 1px solid rgba(74, 77, 94, 0.3);
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: -1px;
+    width: 92.5%;
+  }
+
+  /*&::before {
+    !*width: 1266px;
+    height: 1px;
+    background-color: #4a4d5e;*!
+    opacity: 0.3;
+    !*position: absolute;
+    content: "\00a0";
+    width: 100%;*!
+  }*/
+
+  & .contact {
+    color: #ffffff;
+    font-family: "Sofia Pro Regular";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 23px;
+    width: 143px;
+  }
+
+  & .copyright {
+    color: #4a4d5e;
+    font-family: "Sofia Pro Regular";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 40px;
+    width: 249px;
+
+    @include respond-to(smallScreen) {
+      margin-top: 23px;
+      width: 131px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/*@import "utils/libs";*/
+@import "utils/utilities/variables";
+@import "utils/mixins/mixins";
+/*@import "utils/fonts";
+@import "utils/print";*/
+
+
+/*@import "modules/layout.scss";
+@import "modules/typography.scss";
+@import "modules/buttons.scss";
+@import "modules/forms.scss";*/
+@font-face {
+  font-family: "Sofia Pro Regular";
+  src: url('/lorem-ipsum-co/dist/assets/fonts/SofiaProRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url('/lorem-ipsum-co/dist/assets/fonts/SofiaProMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Sofia Pro Bold";
+  src: url('/lorem-ipsum-co/dist/assets/fonts/SofiaProBold.woff') format('woff');
+}
+
+@import "modules/header.scss";
+@import "modules/main";
+@import "modules/footer";
+/*
+@import "modules/footer.scss";
+@import "modules/greeting.scss";
+@import "modules/parallax.scss";
+@import "modules/services.scss";
+@import "modules/keyframes.scss";*/
