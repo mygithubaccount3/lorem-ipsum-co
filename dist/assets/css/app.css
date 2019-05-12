@@ -1,11 +1,4 @@
-@charset "UTF-8";
-/*@import "utils/libs";*/
-/*@import "utils/fonts";
-@import "utils/print";*/
-/*@import "modules/layout.scss";
-@import "modules/typography.scss";
-@import "modules/buttons.scss";
-@import "modules/forms.scss";*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 @font-face {
   font-family: "Sofia Pro Regular";
   src: url("/lorem-ipsum-co/dist/assets/fonts/SofiaProRegular.woff") format("woff"); }
@@ -18,17 +11,6 @@
   font-family: "Sofia Pro Bold";
   src: url("/lorem-ipsum-co/dist/assets/fonts/SofiaProBold.woff") format("woff"); }
 
-.navbar-collapse {
-  -ms-flex-preferred-size: 16%;
-      flex-basis: 16%;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0; }
-  @media screen and (max-width: 991px) {
-    .navbar-collapse {
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; } }
-
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,18 +21,27 @@
   padding-top: 44px;
   padding-right: 40px;
   padding-left: 50px; }
+  .navbar-collapse {
+    -ms-flex-preferred-size: 16%;
+        flex-basis: 16%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
+    @media screen and (max-width: 991px) {
+      .navbar-collapse {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
 
 .nav-item {
   color: #111518;
-  font-family: "Sofia Pro";
-  font-size: 14px;
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 21px;
-  text-transform: uppercase;
-  /* Text style for "a, bout us" */
   letter-spacing: 0.98px;
+  line-height: 21px;
   margin-right: 20px;
-  padding-top: 11px; }
+  padding-top: 5px;
+  text-transform: uppercase; }
   @media screen and (max-width: 991px) {
     .nav-item {
       margin: auto;
@@ -63,7 +54,7 @@
         margin: auto; } }
 
 main {
-  padding-top: 67px; }
+  padding-top: 55px; }
   @media (max-width: 767px) {
     main {
       padding-top: 30px; } }
@@ -73,20 +64,19 @@ main {
 
 .title {
   color: #111518;
-  font-family: "Sofia Pro Regular";
-  font-size: 70px;
+  font-family: "Sofia Pro Regular", sans-serif;
+  font-size: 4.375rem;
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 72px;
-  margin-bottom: 72px;
+  margin-bottom: 84px;
   margin-left: 179px;
   width: 63%; }
   @media (max-width: 767px) {
     .title {
-      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 36px;
-      margin: auto;
-      margin-bottom: 38px; } }
+      margin: auto auto 38px; } }
 
 .about-us {
   display: -webkit-box;
@@ -115,11 +105,10 @@ main {
       padding-top: 4px; }
     .about-us__item > h2 {
       color: #101417;
-      font-family: "Sofia Pro Bold";
-      font-size: 36px;
+      font-family: "Sofia Pro Bold", sans-serif;
+      font-size: 2.25rem;
       font-weight: 700;
       line-height: 80px;
-      margin-top: 5px;
       margin-bottom: 6px; }
     .about-us__item:nth-child(3) > h2 {
       margin-top: 2px; }
@@ -131,10 +120,9 @@ main {
       padding-left: 1px; }
       .about-us__item > ul > li {
         color: #101417;
-        font-family: "Sofia Pro Regular";
-        font-size: 16px;
+        font-family: "Sofia Pro Regular", sans-serif;
+        font-size: 1rem;
         font-weight: 400;
-        /* Text style for "• I,   T," */
         line-height: 20px;
         list-style-type: none;
         margin-bottom: 16px; }
@@ -146,13 +134,23 @@ main {
 
 .comment {
   background-color: #1d1e25;
-  margin-top: 92px;
-  padding-top: 140px;
+  margin-top: 97px;
+  padding-top: 130px;
   padding-bottom: 144px; }
   @media (max-width: 767px) {
     .comment {
       padding-top: 50px;
       padding-bottom: 50px; } }
+  .comment > p {
+    color: white;
+    margin: auto;
+    width: 190px; }
+  .comment > ul {
+    color: white;
+    margin: auto;
+    padding-left: 0;
+    text-align: center;
+    width: 149px; }
   .comment__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -170,8 +168,8 @@ main {
                 flex-direction: column; } }
   .comment__title {
     color: #ffffff;
-    font-family: "Sofia Pro Bold";
-    font-size: 53px;
+    font-family: "Sofia Pro Bold", sans-serif;
+    font-size: 3.3125rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     line-height: 53px;
@@ -182,19 +180,20 @@ main {
       .comment__title {
         width: 79%; } }
     .comment__title::after {
-      display: block;
-      width: 70px;
-      height: 5px;
       background-color: #f9d10d;
       content: "\00a0";
+      display: block;
+      height: 5px;
       position: absolute;
-      top: 130px;
-      left: 2px; }
+      top: 140px;
+      left: 2px;
+      width: 70px; }
       @media (max-width: 767px) {
         .comment__title::after {
           display: none; } }
 
 form {
+  margin-top: 10px;
   margin-right: 3px;
   width: 58.5%; }
   @media (max-width: 767px) {
@@ -206,53 +205,53 @@ form {
     margin-bottom: 14px; }
   form .form-control {
     background-color: transparent;
-    border-radius: 3px;
     border: 1px solid #60e3a1;
+    border-radius: 3px;
     padding: .6rem 1.2rem; }
     form .form-control::-webkit-input-placeholder {
-      opacity: 0.6;
       color: #60e3a1;
-      font-family: "Sofia Pro Regular";
-      font-size: 16px;
+      font-family: "Sofia Pro Regular", sans-serif;
+      font-size: 1rem;
       font-weight: 400;
-      line-height: 31px; }
+      line-height: 31px;
+      opacity: 0.6; }
     form .form-control::-moz-placeholder {
-      opacity: 0.6;
       color: #60e3a1;
-      font-family: "Sofia Pro Regular";
-      font-size: 16px;
+      font-family: "Sofia Pro Regular", sans-serif;
+      font-size: 1rem;
       font-weight: 400;
-      line-height: 31px; }
+      line-height: 31px;
+      opacity: 0.6; }
     form .form-control:-ms-input-placeholder {
-      opacity: 0.6;
       color: #60e3a1;
-      font-family: "Sofia Pro Regular";
-      font-size: 16px;
+      font-family: "Sofia Pro Regular", sans-serif;
+      font-size: 1rem;
       font-weight: 400;
-      line-height: 31px; }
+      line-height: 31px;
+      opacity: 0.6; }
     form .form-control::-ms-input-placeholder {
-      opacity: 0.6;
       color: #60e3a1;
-      font-family: "Sofia Pro Regular";
-      font-size: 16px;
+      font-family: "Sofia Pro Regular", sans-serif;
+      font-size: 1rem;
       font-weight: 400;
-      line-height: 31px; }
+      line-height: 31px;
+      opacity: 0.6; }
     form .form-control::placeholder {
-      opacity: 0.6;
       color: #60e3a1;
-      font-family: "Sofia Pro Regular";
-      font-size: 16px;
+      font-family: "Sofia Pro Regular", sans-serif;
+      font-size: 1rem;
       font-weight: 400;
-      line-height: 31px; }
+      line-height: 31px;
+      opacity: 0.6; }
   form textarea.form-control {
     height: 149px;
     resize: none; }
   form .btn {
-    border-radius: 3px;
     background-color: #60e3a1;
+    border-radius: 3px;
     color: #1d1e25;
-    font-family: "Sofia Pro Regular";
-    font-size: 16px;
+    font-family: "Sofia Pro Regular", sans-serif;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 44px;
     width: 25.5%; }
@@ -301,10 +300,209 @@ footer {
         margin-top: 23px;
         width: 131px; } }
 
-/*
-@import "modules/footer.scss";
-@import "modules/greeting.scss";
-@import "modules/parallax.scss";
-@import "modules/services.scss";
-@import "modules/keyframes.scss";*/
+.comments-title {
+  color: #111518;
+  font-family: "Sofia Pro Regular", sans-serif;
+  font-size: 4.375rem;
+  font-weight: 400;
+  line-height: 72px;
+  margin-bottom: 94px;
+  margin-left: 180px;
+  width: 345px; }
+
+.comments-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  width: 74%; }
+  .comments-list > div {
+    min-width: 300px;
+    width: 48%; }
+    @media (max-width: 767px) {
+      .comments-list > div {
+        width: 100%; } }
+
+.item-close, .item-edit {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+.item-edit {
+  right: 35px; }
+  .item-edit::after {
+    content: "\f040";
+    font-family: FontAwesome; }
+
+.item-title, .item-comment {
+  border: none;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 17px;
+  padding: 0;
+  resize: none;
+  width: 94%; }
+  .item-title:hover, .item-title:active, .item-title:focus, .item-comment:hover, .item-comment:active, .item-comment:focus {
+    outline: none; }
+
+.item-comment {
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 400; }
+
+.item-link {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #60e3a1;
+  border-radius: 3px;
+  color: #111518;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Sofia Pro Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.24px;
+  line-height: 80px;
+  margin-left: 30px;
+  height: 55px;
+  width: 150px; }
+
+.grid {
+  background: #EEE;
+  height: auto;
+  max-width: 1024px;
+  margin: auto auto auto 181px; }
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .grid-item {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-color: #ffffff;
+    -webkit-box-shadow: 7px 11px 30px rgba(17, 21, 24, 0.04);
+            box-shadow: 7px 11px 30px rgba(17, 21, 24, 0.04);
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    float: left;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+    position: relative;
+    width: 470px; }
+  @media (max-width: 767px) {
+    .grid {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: auto; } }
+
+.comment-title {
+  color: #101417;
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 23px;
+  margin-bottom: 48px; }
+
+.comment-link {
+  color: #1d1e25;
+  font-family: "Sofia Pro Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 53px;
+  position: relative; }
+  .comment-link:hover {
+    text-decoration: none; }
+  .comment-link::before {
+    color: #60e3a1;
+    content: "\f060";
+    font-family: FontAwesome;
+    font-size: 0.875rem;
+    padding-right: 13px; }
+  .comment-link::after {
+    background-color: #1d1e25;
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 26px;
+    width: 137px; }
+
+.comment-text {
+  color: #101417;
+  font-family: "Sofia Pro Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28px; }
+  .comment-text::after {
+    background-color: #4a4d5e;
+    border-bottom: 1px solid black;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 70px;
+    opacity: 0.1;
+    width: 100%; }
+
+.comment-conclusion {
+  color: #111518;
+  font-family: "Sofia Pro Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 72px;
+  margin: auto auto 40px;
+  opacity: 0.5;
+  width: 505px; }
+
+.hero {
+  margin: auto;
+  padding-bottom: 100px;
+  width: 56.2%; }
+  .hero > a:last-child {
+    border: 1px solid #60e3a1;
+    border-radius: 3px;
+    color: #1d1e25;
+    display: block;
+    font-family: "Sofia Pro Regular", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    margin: auto;
+    padding: 20px;
+    width: 210px; }
+    .hero > a:last-child:hover {
+      text-decoration: none; }
+    .hero > a:last-child::before {
+      color: #60e3a1;
+      content: '\f060';
+      font-family: FontAwesome;
+      padding-right: 13px; }
 

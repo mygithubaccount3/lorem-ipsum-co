@@ -87,7 +87,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/index.html`, to: '' },
-      /*{ from: `${PATHS.src}/blog.html`, to: '' },*/
+      { from: `${PATHS.src}/all-comments.html`, to: '' },
+      { from: `${PATHS.src}/comment.html`, to: '' },
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
     ]),
     new imagemin({

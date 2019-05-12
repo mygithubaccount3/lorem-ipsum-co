@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <title>Lorem Ipsum Co</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="index.html#about-us" data-scroll>ABOUT US<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index.html#comment" data-scroll>WRITE COMMENT</a>
+                <a class="nav-item nav-link" href="all-comments.html">COMMENTS</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="hero">
+    <a href="all-comments.html" class="comment-link">Back to Comments</a>
+    <h1 class="comment-title"></h1>
+    <p class="comment-text"></p>
+    <p class="comment-conclusion">Lorem Ipsum is text of the typesetting industry</p>
+    <a href="index.html">Back to Homepage</a>
+</main>
+<footer>
+    <div class="footer-wrapper">
+        <p class="contact">mail@mailtest.com +30-6977664062</p>
+        <p class="copyright">Copyright © 2019 Test All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="assets/js/app.js"></script>
+<script>
+    $('.comment-title').text(sessionStorage.title);
+    $('.comment-text').text(sessionStorage.comment);
+</script>
+</body>
+</html>

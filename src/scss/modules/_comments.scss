@@ -1,0 +1,121 @@
+.comments {
+  &-title {
+    color: #111518;
+    font-family: "Sofia Pro Regular", sans-serif;
+    font-size: rem(70);
+    font-weight: 400;
+    line-height: 72px;
+    margin-bottom: 94px;
+    margin-left: 180px;
+    width: 345px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 74%;
+
+    & > div {
+      min-width: 300px;
+      width: 48%;
+
+      @include respond-to(smallScreen) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.item-close, .item-edit {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.item-edit {
+  right: 35px;
+
+  &::after {
+    content: "\f040";
+    font-family: FontAwesome;
+  }
+}
+
+.item-title, .item-comment {
+  border: none;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
+  font-size: rem(20);
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 17px;
+  padding: 0;
+  resize: none;
+  width: 94%;
+
+  &:hover, &:active, &:focus {
+    outline: none;
+  }
+}
+
+.item-comment {
+  color: #888888;
+  font-size: rem(14);
+  font-weight: 400;
+}
+
+.item-link {
+  align-items: center;
+  align-self: flex-start;
+  background-color: #60e3a1;
+  border-radius: 3px;
+  color: #111518;
+  cursor: pointer;
+  display: flex;
+  font-family: "Sofia Pro Regular", sans-serif;
+  font-size: rem(16);
+  font-weight: 400;
+  justify-content: center;
+  letter-spacing: 0.24px;
+  line-height: 80px;
+  margin-left: 30px;
+  height: 55px;
+  width: 150px;
+}
+
+.grid {
+  background: #EEE;
+  height: auto;
+  max-width: 1024px;
+  margin: auto auto auto 181px;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &-item {
+    align-items: flex-end;
+    background-color: #ffffff;
+    box-shadow: 7px 11px 30px rgba(17, 21, 24, 0.04);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: fit-content;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+    position: relative;
+    width: 470px;
+  }
+
+  @include respond-to(smallScreen) {
+    justify-content: center;
+    margin: auto;
+  }
+}

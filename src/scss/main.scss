@@ -1,14 +1,3 @@
-/*@import "utils/libs";*/
-@import "utils/utilities/variables";
-@import "utils/mixins/mixins";
-/*@import "utils/fonts";
-@import "utils/print";*/
-
-
-/*@import "modules/layout.scss";
-@import "modules/typography.scss";
-@import "modules/buttons.scss";
-@import "modules/forms.scss";*/
 @font-face {
   font-family: "Sofia Pro Regular";
   src: url('/lorem-ipsum-co/dist/assets/fonts/SofiaProRegular.woff') format('woff');
@@ -24,12 +13,12 @@
   src: url('/lorem-ipsum-co/dist/assets/fonts/SofiaProBold.woff') format('woff');
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+@import "utils/utilities/variables";
+@import "utils/mixins/mixins";
 @import "modules/header.scss";
-@import "modules/main";
+@import "modules/hero";
 @import "modules/footer";
-/*
-@import "modules/footer.scss";
-@import "modules/greeting.scss";
-@import "modules/parallax.scss";
-@import "modules/services.scss";
-@import "modules/keyframes.scss";*/
+@import "modules/comments";
+@import "modules/comment";

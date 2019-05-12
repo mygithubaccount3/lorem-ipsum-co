@@ -1,31 +1,30 @@
-.navbar-collapse {
-  flex-basis: 16%;
-  flex-grow: 0;
-
-  @media screen and (max-width: 991px){
-    flex-basis: 100%;
-  }
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   padding-top: 44px;
   padding-right: 40px;
   padding-left: 50px;
+
+  &-collapse {
+    flex-basis: 16%;
+    flex-grow: 0;
+
+    @media screen and (max-width: 991px){
+      flex-basis: 100%;
+    }
+  }
 }
 
 .nav-item {
   color: #111518;
-  font-family: "Sofia Pro";
-  font-size: 14px;
+  font-family: "Sofia Pro", sans-serif;
+  font-size: rem(14);
   font-weight: 500;
-  line-height: 21px;
-  text-transform: uppercase;
-  /* Text style for "a, bout us" */
   letter-spacing: 0.98px;
+  line-height: 21px;
   margin-right: 20px;
-  padding-top: 11px;
+  padding-top: 5px;
+  text-transform: uppercase;
 
   @media screen and (max-width: 991px){
     margin: auto;
