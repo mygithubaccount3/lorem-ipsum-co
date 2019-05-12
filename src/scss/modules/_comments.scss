@@ -8,6 +8,12 @@
     margin-bottom: 94px;
     margin-left: 180px;
     width: 345px;
+
+    @include respond-to(smallScreen) {
+      font-size: 3rem;
+      margin: auto;
+      width: 74%;
+    }
   }
 
   &-list {
@@ -22,7 +28,7 @@
       width: 48%;
 
       @include respond-to(smallScreen) {
-        width: 100%;
+        min-width: 255px;
       }
     }
   }
