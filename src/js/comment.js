@@ -1,25 +1,4 @@
-import Vue from 'vue'
-
 ;(($) => {
-    $('.btn').click((e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const title = $('input').val();
-        const comment = $('textarea').val();
-        const time = Date.now();
-        const settings = {
-            "url": "https://5cbef81d06a6810014c66193.mockapi.io/api/comments",
-            "method": "POST",
-            "timeout": 0,
-            "headers": {
-                "Content-Type": "application/json"
-            },
-            "data": "{\n    \"created_at\": " + time + ",\n    \"title\": " + "\"" + title + "\"" + ",\n    \"body\": " + "\"" + comment + "\"" + "\n}",
-        };
-
-        $.ajax(settings);
-    });
-
     $(document).on('click', '.item-close', function (e) {
         $(e.target).closest('.grid-item').css('display', 'none')
     });
@@ -43,34 +22,5 @@ import Vue from 'vue'
             sessionStorage.comment = $(e.target).prev().text();
         }
         else $('.comment-title').append('Your browser does not support storage')
-    });
-
-    let app = new Vue({
-        el: '#comment',
-        data: {
-            errors: [],
-            comment: "",
-            header: 'Write comment',
-            title: ""
-        },
-        methods: {
-            checkForm: function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                if (this.title && this.comment) {
-                    return true;
-                }
-
-                this.errors = [];
-
-                if (!this.title) {
-                    this.errors.push('Enter title');
-                }
-                if (!this.comment) {
-                    this.errors.push('Enter comment');
-                }
-            }
-        }
     });
 }) (jQuery);
