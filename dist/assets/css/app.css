@@ -327,6 +327,7 @@ footer {
   margin: auto;
   width: 74%; }
   .comments-list > div {
+    margin-right: 5px;
     min-width: 300px;
     width: 48%; }
     @media (max-width: 767px) {
