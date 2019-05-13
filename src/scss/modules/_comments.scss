@@ -32,6 +32,40 @@
       }
     }
   }
+
+  &-hero {
+    padding-bottom: 100px;
+
+    & > a {
+      border: 1px solid #60e3a1;
+      border-radius: 3px;
+      color: #1d1e25;
+      display: block;
+      font-family: "Sofia Pro Regular", sans-serif;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: 20px;
+      margin: auto;
+      padding: 20px;
+      width: 210px;
+
+      @include respond-to(smallScreen) {
+        padding: 5px;
+        width: 180px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &::before {
+        color: #60e3a1;
+        content: '\f060';
+        font-family: FontAwesome;
+        padding-right: 13px;
+      }
+    }
+  }
 }
 
 .item-close, .item-edit {
