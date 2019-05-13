@@ -325,11 +325,11 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto;
-  width: 74%; }
+  width: 78%; }
   .comments-list > div {
-    margin-right: 5px;
+    margin-right: 45px;
     min-width: 300px;
-    width: 48%; }
+    width: 45%; }
     @media (max-width: 767px) {
       .comments-list > div {
         min-width: 255px; } }
@@ -392,7 +392,7 @@ footer {
 
 .grid {
   height: auto;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: auto auto auto 181px; }
   .grid:after {
     content: '';
