@@ -6,12 +6,12 @@
     $(document).on('click', '.item-edit', function (e) {
         e.preventDefault();
         if($(e.target).next().attr('contenteditable')) {
-            $(e.target).next().attr('contenteditable', false).css('border', 'none');
-            $(e.target).next().next().attr('contenteditable', false).css('border', 'none');
+            $(e.target).next().removeAttr('contenteditable').css('box-shadow', 'none');
+            $(e.target).next().next().removeAttr('contenteditable').css('box-shadow', 'none');
         }
         else {
-            $(e.target).next().attr('contenteditable', true).css('border', '1px solid #60e3a1', 'box-shadow', 'inset 3px 3px 28px 0px rgba(12,242,66,1)');
-            $(e.target).next().next().attr('contenteditable', true).css('border', '1px solid #60e3a1', 'box-shadow', 'inset 3px 3px 28px 0px rgba(12,242,66,1)');
+            $(e.target).next().attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
+            $(e.target).next().next().attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
         }
 
     });
