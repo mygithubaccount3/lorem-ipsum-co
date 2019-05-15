@@ -64,6 +64,17 @@
       }
     }
   }
+
+  &-loader {
+    text-align: center;
+
+    & > i {
+      animation: 1s infinite rotate;
+      color: #111518;
+      font-size: rem(72);
+      opacity: 0.5;
+    }
+  }
 }
 
 .item-close, .item-edit {
@@ -159,5 +170,15 @@
   @include respond-to(smallScreen) {
     justify-content: center;
     margin: auto;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

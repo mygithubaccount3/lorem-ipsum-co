@@ -354,6 +354,15 @@ footer {
       color: #60e3a1;
       padding-right: 13px; }
 
+.comments-loader {
+  text-align: center; }
+  .comments-loader > i {
+    -webkit-animation: 1s infinite rotate;
+            animation: 1s infinite rotate;
+    color: #111518;
+    font-size: 4.5rem;
+    opacity: 0.5; }
+
 .item-close, .item-edit {
   cursor: pointer;
   position: absolute;
@@ -451,6 +460,22 @@ footer {
           -ms-flex-pack: center;
               justify-content: center;
       margin: auto; } }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 .comment-title {
   color: #101417;

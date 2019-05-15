@@ -49,17 +49,31 @@
         "timeout": 0,
     };
 
+    $(document).ajaxStart(() => {
+        $('<div class="comments-loader"><i class="fa fa-cog" aria-hidden="true"></i></div>').insertAfter('.grid')
+    });
+
+    $(document).ajaxComplete(() => {
+        $('.comments-loader').remove();
+    });
+
     $.ajax(settings).done(function (response) {
         $(document).ready(() => {
-            response.forEach((e, i, a) => {
-                $( "<div class='grid-item'>" +
-                    "<a class='item-close'>X</a>" +
-                    "<a class='item-edit'></a>" +
-                    "<p class='item-title'>" + e.title + "</p>" +
-                    "<p class='item-comment'>" + e.body + "</p>" +
-                    "<a href='comment.html' class='item-link hvr-glow'>" + "Read more" + "</a>" +
-                    "</div>" ).appendTo( '.grid' );
-            });
+            if (!$.trim(response)){
+                $("<p class='comment-conclusion' style='text-align: center'>Nothing to show</p>").insertAfter(".grid");
+            }
+            else{
+                response.forEach((e, i, a) => {
+                    $( "<div class='grid-item'>" +
+                        "<a class='item-close'>X</a>" +
+                        "<a class='item-edit'></a>" +
+                        "<p class='item-title'>" + e.title + "</p>" +
+                        "<p class='item-comment'>" + e.body + "</p>" +
+                        "<a href='comment.html' class='item-link hvr-glow'>" + "Read more" + "</a>" +
+                        "</div>" ).appendTo( '.grid' );
+                });
+            }
+
             $('.grid').masonry({
                 itemSelector: '.grid-item',
                 gutter: 45
