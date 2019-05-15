@@ -17,13 +17,12 @@
     position: relative;
 
     &:hover {
+      color: #1d1e25;
       text-decoration: none;
     }
 
-    &::before {
+    & > i {
       color: #60e3a1;
-      content: "\f060";
-      font-family: FontAwesome;
       font-size: rem(14);
       padding-right: 13px;
     }
@@ -107,10 +106,8 @@
       text-decoration: none;
     }
 
-    &::before {
+    & > i {
       color: #60e3a1;
-      content: '\f060';
-      font-family: FontAwesome;
       padding-right: 13px;
     }
   }

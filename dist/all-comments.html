@@ -12,7 +12,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+        <a class="navbar-brand hvr-bob" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,7 +29,7 @@
     <h1 class="comments-title">Comments</h1>
     <div class="comments-list grid"></div>
     <p class="comment-conclusion">Lorem Ipsum is text of the typesetting industry</p>
-    <a href="index.html">Back to Homepage</a>
+    <a href="index.html" class="hvr-icon-back"><i class="fa fa-arrow-left hvr-icon" aria-hidden="true"></i>Back to Homepage</a>
 </main>
 <footer>
     <div class="footer-wrapper">
@@ -57,7 +57,7 @@
                     "<a class='item-edit'></a>" +
                     "<p class='item-title'>" + e.title + "</p>" +
                     "<p class='item-comment'>" + e.body + "</p>" +
-                    "<a href='comment.html' class='item-link'>" + "Read more" + "</a>" +
+                    "<a href='comment.html' class='item-link hvr-glow'>" + "Read more" + "</a>" +
                     "</div>" ).appendTo( '.grid' );
             });
             $('.grid').masonry({
