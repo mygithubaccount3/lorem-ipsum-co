@@ -46,15 +46,13 @@
         "url": "https://5cbef81d06a6810014c66193.mockapi.io/api/comments",
         "method": "GET",
         "timeout": 0,
+        "beforeSend": function () {
+            $('<div class="comments-loader"><i class="fa fa-cog" aria-hidden="true"></i></div>').insertAfter('.grid')
+        },
+        "complete": function () {
+            $('.comments-loader').remove()
+        }
     };
-
-    $(document).ajaxStart(() => {
-        $('<div class="comments-loader"><i class="fa fa-cog" aria-hidden="true"></i></div>').insertAfter('.grid')
-    });
-
-    $(document).ajaxComplete(() => {
-        $('.comments-loader').remove();
-    });
 
     $.ajax(settings).done(function (response) {
         $(document).ready(() => {
