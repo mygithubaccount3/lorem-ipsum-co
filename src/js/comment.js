@@ -1,19 +1,21 @@
 ;(($) => {
     $(document).on('click', '.item-close', function (e) {
+        e.preventDefault();
         $(e.target).closest('.grid-item').css('display', 'none')
     });
 
     $(document).on('click', '.item-edit', function (e) {
         e.preventDefault();
-        if($(e.target).next().attr('contenteditable')) {
-            $(e.target).next().removeAttr('contenteditable').css('box-shadow', 'none');
-            $(e.target).next().next().removeAttr('contenteditable').css('box-shadow', 'none');
-        }
-        else {
-            $(e.target).next().attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
-            $(e.target).next().next().attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
-        }
+        $(e.target).nextAll('p').attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
+        $(e.target).attr('disabled', true);
+        $(e.target).next().removeAttr('disabled');
+    });
 
+    $(document).on('click', '.item-save', function (e) {
+        e.preventDefault();
+        $(e.target).nextAll('p').removeAttr('contenteditable').css('box-shadow', 'none');
+        $(e.target).attr('disabled', true);
+        $(e.target).prev().removeAttr('disabled');
     });
 
     $(document).on('click', '.item-link', function (e) {

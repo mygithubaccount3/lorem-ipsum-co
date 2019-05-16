@@ -64,8 +64,9 @@
             else{
                 response.forEach((e, i, a) => {
                     $( "<div class='grid-item'>" +
-                        "<a class='item-close'>X</a>" +
-                        "<a class='item-edit'></a>" +
+                        "<button class='item-close'></button>" +
+                        "<button class='item-edit'></button>" +
+                        "<button class='item-save' disabled></button>" +
                         "<p class='item-title'>" + e.title + "</p>" +
                         "<p class='item-comment'>" + e.body + "</p>" +
                         "<a href='comment.html' class='item-link hvr-glow'>" + "Read more" + "</a>" +
