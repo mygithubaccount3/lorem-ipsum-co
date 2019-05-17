@@ -1,4 +1,47 @@
 .comment {
+  &-delete, &-edit, &-save {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 70px;
+
+    &:disabled {
+      cursor: auto;
+      opacity: 0.2;
+    }
+
+    &::after {
+      font-family: FontAwesome;
+    }
+  }
+
+  &-delete {
+    background-color: rgba(255, 0, 0, 0.5);
+    right: 10px;
+
+    &::after {
+      content: "\f00d";
+    }
+  }
+
+  &-edit {
+    background-color: rgba(255, 215, 0, 0.5);
+    right: 50px;
+
+    &::after {
+      content: "\f040";
+    }
+  }
+
+  &-save {
+    background-color: rgba(144, 238, 144, 0.5);
+    right: 90px;
+
+    &::after {
+      content: '\f00c';
+    }
+  }
+
   &-title {
     color: #101417;
     font-family: "Sofia Pro", sans-serif;
@@ -6,6 +49,7 @@
     font-weight: 700;
     margin-top: 23px;
     margin-bottom: 48px;
+    padding: 10px;
   }
 
   &-link {
@@ -44,6 +88,7 @@
     font-size: rem(16);
     font-weight: 400;
     line-height: 28px;
+    padding: 10px;
 
     &::after {
       background-color: #4a4d5e;
@@ -78,6 +123,7 @@
 .hero {
   margin: auto;
   padding-bottom: 100px;
+  position: relative;
   width: 56.2%;
 
   @include respond-to(smallScreen) {

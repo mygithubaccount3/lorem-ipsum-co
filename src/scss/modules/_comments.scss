@@ -77,50 +77,6 @@
   }
 }
 
-.item-close, .item-edit, .item-save {
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-
-  &:disabled {
-    cursor: auto;
-    opacity: 0.2;
-  }
-
-  &::after {
-    font-family: FontAwesome;
-  }
-}
-
-.item-close {
-  background-color: rgba(255, 0, 0, 0.5);
-  right: 10px;
-
-  &::after {
-    content: "\f00d";
-  }
-}
-
-.item-edit {
-  background-color: rgba(255, 215, 0, 0.5);
-  right: 50px;
-
-  &::after {
-    content: "\f040";
-  }
-}
-
-.item-save {
-  background-color: rgba(144, 238, 144, 0.5);
-  right: 90px;
-
-  &::after {
-    content: '\f00c';
-  }
-
-}
-
 .item-title, .item-comment {
   border: none;
   color: #333333;
