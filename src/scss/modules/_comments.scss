@@ -149,6 +149,11 @@
     padding-bottom: 45px;
     position: relative;
     width: 470px;
+
+    @include respond-to(smallScreen) {
+      margin: auto auto 10px;
+      right: 0;
+    }
   }
 
   @include respond-to(smallScreen) {
