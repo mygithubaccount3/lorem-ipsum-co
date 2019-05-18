@@ -12,7 +12,7 @@
     @include respond-to(smallScreen) {
       font-size: 3rem;
       margin: auto;
-      width: 74%;
+      width: 235px;
     }
   }
 
@@ -27,7 +27,7 @@
       min-width: 300px;
       width: 45%;
 
-      @include respond-to(smallScreen) {
+      @media screen and (max-width: 1024px){
         min-width: 255px;
       }
     }
@@ -127,7 +127,6 @@
 .grid {
   height: auto;
   max-width: 1200px;
-  margin: auto auto auto 181px;
 
   &:after {
     content: '';
@@ -159,6 +158,10 @@
   @include respond-to(smallScreen) {
     justify-content: center;
     margin: auto;
+  }
+
+  @media screen and (min-width: 1200px){
+    margin: auto auto auto 181px;
   }
 }
 

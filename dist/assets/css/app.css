@@ -310,7 +310,7 @@ footer {
     .comments-title {
       font-size: 3rem;
       margin: auto;
-      width: 74%; } }
+      width: 235px; } }
 
 .comments-list {
   display: -webkit-box;
@@ -326,7 +326,7 @@ footer {
   .comments-list > div {
     min-width: 300px;
     width: 45%; }
-    @media (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
       .comments-list > div {
         min-width: 255px; } }
 
@@ -412,8 +412,7 @@ footer {
 
 .grid {
   height: auto;
-  max-width: 1200px;
-  margin: auto auto auto 181px; }
+  max-width: 1200px; }
   .grid:after {
     content: '';
     display: block;
@@ -452,6 +451,9 @@ footer {
           -ms-flex-pack: center;
               justify-content: center;
       margin: auto; } }
+  @media screen and (min-width: 1200px) {
+    .grid {
+      margin: auto auto auto 181px; } }
 
 @-webkit-keyframes rotate {
   0% {
