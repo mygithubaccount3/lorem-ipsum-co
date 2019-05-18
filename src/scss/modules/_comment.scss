@@ -1,9 +1,83 @@
 .comment {
+  background-color: #1d1e25;
+  margin-top: 97px;
+  padding-top: 130px;
+  padding-bottom: 144px;
+
+  @media screen and (max-width: 1024px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  & > p {
+    color: white;
+    margin: auto;
+    width: 190px;
+  }
+
+  & > ul {
+    color: white;
+    margin: auto;
+    padding-left: 0;
+    text-align: center;
+    width: 149px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 74%;
+
+    @include respond-to(smallScreen) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    border-radius: 7px;
+    color: #ffffff;
+    font-family: "Sofia Pro Bold", sans-serif;
+    font-size: rem(53);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 53px;
+    margin-left: 1px;
+    position: relative;
+    width: 24%;
+
+    @include respond-to(smallScreen) {
+      font-size: rem(24);
+      margin-top: 8px;
+      margin-bottom: 8px;
+      width: 190px;
+    }
+
+    @include respond-to(tablet) {
+      width: 255px;
+    }
+
+    &::after {
+      background-color: #f9d10d;
+      content: "\00a0";
+      display: block;
+      height: 5px;
+      position: absolute;
+      top: 140px;
+      left: 2px;
+      width: 70px;
+
+      @include respond-to(smallScreen) {
+        display: none;
+      }
+    }
+  }
+
   &-delete, &-edit, &-save {
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 70px;
+    top: 85px;
 
     &:disabled {
       cursor: auto;
@@ -17,7 +91,7 @@
 
   &-delete {
     background-color: rgba(255, 0, 0, 0.5);
-    right: 10px;
+    right: 0;
 
     &::after {
       content: "\f00d";
@@ -26,7 +100,7 @@
 
   &-edit {
     background-color: rgba(255, 215, 0, 0.5);
-    right: 50px;
+    right: 40px;
 
     &::after {
       content: "\f040";
@@ -35,22 +109,11 @@
 
   &-save {
     background-color: rgba(144, 238, 144, 0.5);
-    right: 90px;
+    right: 80px;
 
     &::after {
       content: '\f00c';
     }
-  }
-
-  &-title {
-    border-radius: 7px;
-    color: #101417;
-    font-family: "Sofia Pro", sans-serif;
-    font-size: rem(48);
-    font-weight: 700;
-    margin-top: 23px;
-    margin-bottom: 48px;
-    padding: 10px;
   }
 
   &-link {
@@ -119,6 +182,7 @@
 
   @include respond-to(smallScreen) {
     padding-bottom: 40px;
+    width: 75%;
   }
 
   & > a:last-child {
