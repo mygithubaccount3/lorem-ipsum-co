@@ -5,7 +5,7 @@ import './css/hollow.css'
 import './css/icon-back.css'
 import './css/glow.css'
 import './css/bob.css'
-import './css/wobble-skew.css'
+import './css/bounce-in.css'
 import './js/comment'
 import SmoothScroll from './js/smooth-scroll.min'
 
