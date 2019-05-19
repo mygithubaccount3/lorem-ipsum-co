@@ -1,63 +1,48 @@
 .comment {
-  background-color: #1d1e25;
-  margin-top: 97px;
-  padding-top: 130px;
-  padding-bottom: 144px;
+  margin: auto;
+  padding-bottom: 100px;
+  width: 56.2%;
 
-  @media screen and (max-width: 1024px){
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @include respond-to(smallScreen) {
+    padding-bottom: 40px;
+    width: 75%;
   }
 
-  & > p {
-    color: white;
-    margin: auto;
-    width: 190px;
+  @media screen and (min-width: 1024px) {
+    min-height: 559px;
   }
 
-  & > ul {
-    color: white;
-    margin: auto;
-    padding-left: 0;
-    text-align: center;
-    width: 149px;
-  }
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    width: 74%;
-
-    @include respond-to(smallScreen) {
-      flex-direction: column;
-    }
-  }
-
-  &-title {
-    border-radius: 7px;
+  & > a:last-child {
+    border: 1px solid #60e3a1;
+    border-radius: 3px;
     color: #1d1e25;
-    font-family: "Sofia Pro Bold", sans-serif;
-    font-size: rem(53);
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    line-height: 53px;
-    margin-left: 1px;
-    padding: 10px;
-    width: 100%;
+    display: block;
+    font-family: "Sofia Pro Regular", sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: 20px;
+    margin: auto;
+    padding: 20px;
+    width: 210px;
 
     @include respond-to(smallScreen) {
-      font-size: rem(24);
-      margin-top: 40px;
-      margin-bottom: 8px;
+      padding: 5px;
+      width: 180px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    & > i {
+      color: #60e3a1;
+      padding-right: 13px;
     }
   }
 
-  &-delete, &-edit, &-save {
+  &__delete, &__edit, &__save {
     border: none;
     cursor: pointer;
-    position: absolute;
-    top: 80px;
 
     &:disabled {
       cursor: auto;
@@ -69,34 +54,31 @@
     }
   }
 
-  &-delete {
+  &__delete {
     background-color: rgba(255, 0, 0, 0.5);
-    right: 0;
 
     &::after {
       content: "\f00d";
     }
   }
 
-  &-edit {
+  &__edit {
     background-color: rgba(255, 215, 0, 0.5);
-    right: 40px;
 
     &::after {
       content: "\f040";
     }
   }
 
-  &-save {
+  &__save {
     background-color: rgba(144, 238, 144, 0.5);
-    right: 80px;
 
     &::after {
       content: '\f00c';
     }
   }
 
-  &-link {
+  &__link {
     color: #1d1e25;
     font-family: "Sofia Pro Regular", sans-serif;
     font-size: rem(16);
@@ -126,7 +108,31 @@
     }
   }
 
-  &-text {
+  &__btn-wrapper {
+    margin: auto;
+    width: 88px;
+  }
+
+  &__title {
+    border-radius: 7px;
+    color: #1d1e25;
+    font-family: "Sofia Pro Bold", sans-serif;
+    font-size: rem(53);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 53px;
+    margin-left: 1px;
+    padding: 10px;
+    width: 100%;
+
+    @include respond-to(smallScreen) {
+      font-size: rem(24);
+      margin-top: 40px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
     border-radius: 7px;
     color: #101417;
     font-family: "Sofia Pro Regular", sans-serif;
@@ -134,25 +140,9 @@
     font-weight: 400;
     line-height: 28px;
     padding: 10px;
-    position: relative;
-
-    &::after {
-      background-color: #f9d10d;
-      content: "\00a0";
-      display: block;
-      height: 5px;
-      position: absolute;
-      top: 60px;
-      left: 2px;
-      width: 70px;
-
-      @include respond-to(smallScreen) {
-        display: none;
-      }
-    }
   }
 
-  &-conclusion {
+  &__conclusion {
     color: #111518;
     font-family: "Sofia Pro Regular", sans-serif;
     font-size: rem(24);
@@ -166,46 +156,6 @@
       font-size: 1rem;
       line-height: 24px;
       width: 180px;
-    }
-  }
-}
-
-.hero {
-  margin: auto;
-  padding-bottom: 100px;
-  position: relative;
-  width: 56.2%;
-
-  @include respond-to(smallScreen) {
-    padding-bottom: 40px;
-    width: 75%;
-  }
-
-  & > a:last-child {
-    border: 1px solid #60e3a1;
-    border-radius: 3px;
-    color: #1d1e25;
-    display: block;
-    font-family: "Sofia Pro Regular", sans-serif;
-    font-size: rem(16);
-    font-weight: 400;
-    line-height: 20px;
-    margin: auto;
-    padding: 20px;
-    width: 210px;
-
-    @include respond-to(smallScreen) {
-      padding: 5px;
-      width: 180px;
-    }
-
-    &:hover {
-      text-decoration: none;
-    }
-
-    & > i {
-      color: #60e3a1;
-      padding-right: 13px;
     }
   }
 }

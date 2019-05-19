@@ -1,0 +1,129 @@
+.comment-form {
+  background-color: #1d1e25;
+  margin-top: 97px;
+  padding-top: 130px;
+  padding-bottom: 144px;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  & > p {
+    color: white;
+    margin: auto;
+    width: 190px;
+  }
+
+  & > ul {
+    color: white;
+    margin: auto;
+    padding-left: 0;
+    text-align: center;
+    width: 149px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 74%;
+
+    @include respond-to(smallScreen) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-family: "Sofia Pro Bold", sans-serif;
+    font-size: rem(55);
+    font-weight: 700;
+    line-height: 55px;
+    position: relative;
+    width: 300px;
+
+    &::after {
+      background-color: #f9d10d;
+      content: "\00a0";
+      display: block;
+      height: 5px;
+      position: absolute;
+      top: 140px;
+      left: 3px;
+      width: 70px;
+
+      @include respond-to(smallScreen) {
+        display: none;
+      }
+    }
+
+    @include respond-to(smallScreen) {
+      width: 235px;
+    }
+  }
+}
+
+form {
+  margin-top: 10px;
+  margin-right: 3px;
+  width: 58.5%;
+
+  @include respond-to(smallScreen) {
+    width: 90%;
+  }
+
+  & .form-group {
+    &:first-child .form-control {
+      height: 55px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 14px;
+    }
+  }
+
+  & .form-control {
+    background-color: transparent;
+    border: 1px solid #60e3a1;
+    border-radius: 3px;
+    padding: .6rem 1.2rem;
+
+    &::placeholder {
+      color: #60e3a1;
+      font-family: "Sofia Pro Regular", sans-serif;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: 31px;
+      opacity: 0.6;
+    }
+
+    &:focus, &:hover {
+      background-color: transparent;
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+      color: white;
+      outline: 0;
+    }
+  }
+
+  & textarea.form-control {
+    height: 149px;
+    resize: none;
+  }
+
+  & .btn {
+    background-color: #60e3a1;
+    border-radius: 3px;
+    color: #1d1e25;
+    font-family: "Sofia Pro Regular", sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: 44px;
+    width: 25.5%;
+
+    @include respond-to(smallScreen) {
+      width: 100px;
+    }
+  }
+}

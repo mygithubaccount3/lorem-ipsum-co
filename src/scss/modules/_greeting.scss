@@ -1,0 +1,36 @@
+.greeting {
+  padding-top: 55px;
+
+  @include respond-to(smallScreen) {
+    padding-top: 30px;
+  }
+
+  &__title {
+    color: #111518;
+    font-family: "Sofia Pro Regular", sans-serif;
+    font-size: rem(70);
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 72px;
+    margin-bottom: 84px;
+    margin-left: 179px;
+    width: 63%;
+
+    @include respond-to(smallScreen) {
+      font-size: rem(24);
+      line-height: 36px;
+      margin: auto auto 38px;
+    }
+
+    @include respond-to(tablet) {
+      margin-right: auto;
+      margin-left: auto;
+      width: 80%;
+    }
+  }
+
+  & > img {
+    height: auto;
+    width: 100%;
+  }
+}

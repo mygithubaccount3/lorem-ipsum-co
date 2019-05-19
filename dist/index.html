@@ -18,14 +18,14 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link hvr-overline-from-center" href="#about-us" data-scroll>ABOUT US<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link hvr-overline-from-center" href="#comment" data-scroll>WRITE COMMENT</a>
-                <a class="nav-item nav-link hvr-overline-from-center" href="all-comments.html">COMMENTS</a>
+                <a class="nav-item nav-link hvr-overline-from-center" href="#comment-form" data-scroll>WRITE COMMENT</a>
+                <a class="nav-item nav-link hvr-overline-from-center" href="comments-list.html">COMMENTS</a>
             </div>
         </div>
     </nav>
 </header>
-<main>
-    <h1 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
+<main class="greeting">
+    <h1 class="greeting__title">Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
     <img src="assets/img/main-photo.jpg" alt="main photo" class="d-none d-md-inline-block">
     <section class="about-us" id="about-us">
         <div class="about-us__item">
@@ -58,7 +58,7 @@
             </ul>
         </div>
     </section>
-    <section class="comment" id="comment">
+    <section class="comment-form" id="comment-form">
         <p v-if="errors.length">
             <b>Please correct next error:</b>
             <ul>
@@ -66,11 +66,11 @@
             </ul>
         </p>
         <p v-if="sent" style="color: white">Comment sent</p>
-        <div class="comment__wrapper">
-            <h2 class="comment__title">{{header}}</h2>
+        <div class="comment-form__wrapper">
+            <h2 class="comment-form__title">{{header}}</h2>
             <form @submit="sendForm">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="title" placeholder="Title" v-model="title">
+                    <input type="text" class="form-control" placeholder="Title" v-model="title">
                 </div>
                 <div class="form-group">
                     <textarea class="form-control" placeholder="Your comment" rows="6" v-model="comment"></textarea>
@@ -82,8 +82,8 @@
 </main>
 <footer>
     <div class="footer-wrapper">
-        <p class="contact">mail@mailtest.com +30-6977664062</p>
-        <p class="copyright">Copyright © 2019 Test All Rights Reserved.</p>
+        <p class="footer-wrapper__contact">mail@mailtest.com +30-6977664062</p>
+        <p class="footer-wrapper__copyright">Copyright © 2019 Test All Rights Reserved.</p>
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -92,12 +92,12 @@
 <script src="assets/js/app.js"></script>
 <script>
     let app = new Vue({
-        el: '#comment',
+        el: '#comment-form',
         data: {
             errors: [],
-            comment: "",
+            comment: '',
             header: 'Write comment',
-            title: "",
+            title: '',
             sent: false
         },
         methods: {
