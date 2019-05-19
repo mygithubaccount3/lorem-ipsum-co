@@ -145,6 +145,7 @@ footer {
     font-size: 4.375rem;
     font-weight: 400;
     line-height: 72px;
+    margin-top: 55px;
     margin-bottom: 94px;
     margin-left: 180px;
     width: 345px; }
@@ -286,16 +287,13 @@ footer {
             transform: rotate(360deg); } }
 
 .comment {
-  margin: auto;
+  margin: 55px auto auto;
   padding-bottom: 100px;
   width: 56.2%; }
   @media (max-width: 767px) {
     .comment {
       padding-bottom: 40px;
       width: 75%; } }
-  @media screen and (min-width: 1024px) {
-    .comment {
-      min-height: 559px; } }
   .comment > a:last-child {
     border: 1px solid #60e3a1;
     border-radius: 3px;
