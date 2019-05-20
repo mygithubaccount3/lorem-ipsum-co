@@ -292,8 +292,12 @@ footer {
   width: 56.2%; }
   @media (max-width: 767px) {
     .comment {
+      min-height: 538px;
       padding-bottom: 40px;
       width: 75%; } }
+  @media screen and (min-width: 767px) {
+    .comment {
+      min-height: 1081px; } }
   .comment > a:last-child {
     border: 1px solid #60e3a1;
     border-radius: 3px;

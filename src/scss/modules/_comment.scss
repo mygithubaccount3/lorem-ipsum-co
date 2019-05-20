@@ -4,8 +4,13 @@
   width: 56.2%;
 
   @include respond-to(smallScreen) {
+    min-height: 538px;
     padding-bottom: 40px;
     width: 75%;
+  }
+
+  @media screen and (min-width: 767px){
+    min-height: 1081px;
   }
 
   & > a:last-child {
