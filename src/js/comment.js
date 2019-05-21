@@ -8,7 +8,7 @@
                 "beforeSend": function () {
                     $('<div class="comments-list__loader" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;' +
                         'background-color: white; opacity: 0.8; padding-top: 100px">' +
-                        '<i class="fa fa-cog" aria-hidden="true"></i></div>').insertAfter('.comment__save')
+                        '<i class="fa fa-cog" aria-hidden="true"></i></div>').insertBefore('.comment__link')
                 },
                 "complete": function () {
                     $('.comments-list__loader').replaceWith('<div class="comments-list__loader" style="position: absolute; top: 0; ' +
@@ -24,7 +24,7 @@
 
     $(document).on('click', '.comment__edit', function (e) {
         e.preventDefault();
-        $(e.target).nextAll('.comment__title, .comment__text').attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
+        $(e.target).parent().nextAll('.comment__title, .comment__text').attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
         $(e.target).attr('disabled', true);
         $(e.target).next().removeAttr('disabled');
     });
@@ -39,20 +39,20 @@
                     "Content-Type": "application/json"
                 },
                 "data": "{\n    \"created_at\": " + Date.now() + ",\n    \"title\": " + "\"" +
-                         $(e.target).nextAll('.comment__title').text() + "\"" + ",\n    \"body\": " + "\"" +
-                         $(e.target).nextAll('.comment__text').text() + "\"" + "\n}",
+                         $(e.target).parent().nextAll('.comment__title').text() + "\"" + ",\n    \"body\": " + "\"" +
+                         $(e.target).parent().nextAll('.comment__text').text() + "\"" + "\n}",
                 "beforeSend": function () {
-                    $(e.target).nextAll('.comment__title, .comment__text').removeAttr('contenteditable').css('box-shadow', 'none');
+                    $(e.target).parent().nextAll('.comment__title, .comment__text').removeAttr('contenteditable').css('box-shadow', 'none');
                     $('<div class="comments-list__loader" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;' +
                                                           'background-color: white; opacity: 0.8; padding-top: 100px">' +
-                                                          '<i class="fa fa-cog" aria-hidden="true"></i></div>').insertAfter('.comment__save')
+                                                          '<i class="fa fa-cog" aria-hidden="true"></i></div>').insertBefore('.comment__link')
                 },
                 "complete": function () {
                     $('.comments-list__loader').remove();
                     $(e.target).attr('disabled', true);
                     $(e.target).prev().removeAttr('disabled');
-                    sessionStorage.title = $(e.target).next().text();
-                    sessionStorage.comment = $(e.target).nextAll('.comment__text').text();
+                    sessionStorage.title = $(e.target).parent().next().text();
+                    sessionStorage.comment = $(e.target).parent().nextAll('.comment__text').text();
                 }
             })
     });
