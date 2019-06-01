@@ -1,7 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const imagemin = require('imagemin-webpack-plugin').default;
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const purgeCSS = require('purgecss-webpack-plugin');
 const glob = require('glob');
@@ -19,7 +18,10 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
+    commentsList: './src/js/comments-list.js',
+    commentForm: './src/js/comment-form.js',
+    commentItem: './src/js/comment-item.js'
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -91,12 +93,6 @@ module.exports = {
       { from: `${PATHS.src}/comment.html`, to: '' },
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
     ]),
-    new imagemin({
-      disable: process.env.NODE_ENV !== 'production',
-      pngquant: {
-        quality: '70-75'
-      }
-    }),
     new CleanWebpackPlugin('../dist/*', {verbose: true, allowExternal: true}),
     new purgeCSS({
       paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),

@@ -26,16 +26,7 @@
     </nav>
 </header>
 <main class="comment">
-    <a href="comments-list.html" class="comment__link hvr-icon-back"><i class="fa fa-arrow-left hvr-icon" aria-hidden="true"></i>Back to Comments</a>
-    <div class="comment__btn-wrapper">
-        <button class='comment__delete'></button>
-        <button class='comment__edit'></button>
-        <button class='comment__save' disabled></button>
-    </div>
-    <h1 class="comment__title"></h1>
-    <p class="comment__text"></p>
-    <p class="comment__conclusion">Lorem Ipsum is text of the typesetting industry</p>
-    <a href="index.html" class="hvr-icon-back"><i class="fa fa-arrow-left hvr-icon" aria-hidden="true"></i>Back to Homepage</a>
+    <comment></comment>
 </main>
 <footer>
     <div class="footer-wrapper">
@@ -45,10 +36,9 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://unpkg.com/vuex"></script>
+<script src="assets/js/commentItem.js"></script>
 <script src="assets/js/app.js"></script>
-<script>
-    $('.comment__title').text(sessionStorage.title);
-    $('.comment__text').text(sessionStorage.comment);
-</script>
 </body>
 </html>
